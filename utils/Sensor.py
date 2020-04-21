@@ -5,6 +5,7 @@ import time as clock
 import math
 import threading
 import queue
+from madgwick import MadgwickAHRS
 
 class Sensor:
 
@@ -12,6 +13,7 @@ class Sensor:
     ACCEL_LPF = 0.2
     MAG_LPF = 0.2
     GYRO_LPF = 0.2
+    SAMPLE_TIME = 0.08
 
     def __init__(self, raw=False, processed=False, i2c=None):
         if i2c == None:
@@ -28,17 +30,21 @@ class Sensor:
         self.raw = raw
         self.processed = processed
 
+        self.ahrs = MadgwickAHRS(self.SAMPLE_TIME)
+        self.maj = True
+
         self.thread = threading.Thread(None, self.mainloop)
         self.thread.setDaemon(True)
         self.thread.start()
 
     def get_all(self):
         result = None
-        while result == None:
+        while 1:
             try:
-                result = self.queue.get()
+                result = self.queue.get(block=False)
             except queue.Empty:
-                pass
+                if result != None:
+                    break
         return result
 
     def get_gyro(self):
@@ -61,6 +67,7 @@ class Sensor:
     
     def mainloop(self):
         while 1:
+            start = clock.time()
             if self.raw:
                 raw_accel = self.get_accel_raw()
                 raw_mag = self.get_mag_raw()
@@ -97,9 +104,19 @@ class Sensor:
             if self.processed:
                 final += [proc_accel, proc_mag, proc_gyro]
 
-            self.queue.put(final)
 
-            self.old_accel = accel
-            self.old_mag = mag
-            self.old_gyro = gyro
+            if not self.maj:
+                self.queue.put(final)
+
+            if self.raw:
+                self.old_accel = accel
+                self.old_mag = mag
+                self.old_gyro = gyro
+            
+            if self.maj:
+                for i in range(5):
+                    self.ahrs.update([x*0.0174533 for x in proc_gyro], accel, mag)
+                self.queue.put(self.ahrs.quaternion.to_euler_angles())
+
+            clock.sleep(self.SAMPLE_TIME - (clock.time()-start))
     
