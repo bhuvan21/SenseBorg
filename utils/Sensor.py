@@ -98,8 +98,9 @@ class Sensor:
                 final += [proc_accel, proc_mag, proc_gyro]
 
             self.queue.put(final)
-
-            self.old_accel = accel
-            self.old_mag = mag
-            self.old_gyro = gyro
+            
+            if self.raw:
+                self.old_accel = accel
+                self.old_mag = mag
+                self.old_gyro = gyro
     
