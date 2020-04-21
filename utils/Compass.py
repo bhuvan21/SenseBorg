@@ -3,10 +3,13 @@ from Sensor import Sensor
 
 class Compass:
     def __init__(self, i2c=None):
-        self.sensor = Sensor(raw=True, i2c=i2c)
+        self.sensor = Sensor(raw=True, processed=True, i2c=i2c)
 
-    def get_heading(self):
-        raw = self.sensor.get_all()
+    def get_heading(self, data=None):
+        if data is None:
+            raw = self.sensor.get_all()
+        else:
+            raw = data
         accel = raw[0]
         mag = raw[1]
 
@@ -23,3 +26,7 @@ class Compass:
             heading += 360
 
         return int(heading)
+    
+    
+    def get_angles(self):
+        return [y*(57.2958**2) for y in self.sensor.get_all()]
