@@ -5,7 +5,7 @@ import time as clock
 import math
 import threading
 import queue
-from madgwick import MadgwickAHRS
+from maj import MadgwickAHRS
 
 class Sensor:
 
@@ -15,7 +15,7 @@ class Sensor:
     GYRO_LPF = 0.2
     SAMPLE_TIME = 0.08
 
-    def __init__(self, raw=False, processed=False, i2c=None):
+    def __init__(self, raw=False, processed=False, maj=False, i2c=None):
         if i2c == None:
             self.i2c = busio.I2C(board.SCL, board.SDA)
         else:
@@ -30,8 +30,8 @@ class Sensor:
         self.raw = raw
         self.processed = processed
 
-        self.ahrs = MadgwickAHRS(self.SAMPLE_TIME)
-        self.maj = True
+        self.ahrs = MadgwickAHRS(self.SAMPLE_TIME/5)
+        self.maj = maj
 
         self.thread = threading.Thread(None, self.mainloop)
         self.thread.setDaemon(True)
@@ -103,28 +103,18 @@ class Sensor:
                 final += [accel, mag, gyro]
             if self.processed:
                 final += [proc_accel, proc_mag, proc_gyro]
-
-<<<<<<< HEAD
+            if self.maj:
+                for i in range(5):
+                    self.ahrs.update([x*0.0174533 for x in proc_gyro], accel, mag)
+                final += self.ahrs.quaternion.to_euler_angles()
             self.queue.put(final)
-            
-=======
 
-            if not self.maj:
-                self.queue.put(final)
-
->>>>>>> 20b733f88b9c2195e209445a98810e15ebd289dc
             if self.raw:
                 self.old_accel = accel
                 self.old_mag = mag
                 self.old_gyro = gyro
-<<<<<<< HEAD
-=======
-            
-            if self.maj:
-                for i in range(5):
-                    self.ahrs.update([x*0.0174533 for x in proc_gyro], accel, mag)
-                self.queue.put(self.ahrs.quaternion.to_euler_angles())
 
-            clock.sleep(self.SAMPLE_TIME - (clock.time()-start))
->>>>>>> 20b733f88b9c2195e209445a98810e15ebd289dc
+            delay = self.SAMPLE_TIME - (clock.time()-start)
+            if delay > 0 and self.maj:
+                clock.sleep(delay)
     

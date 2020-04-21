@@ -27,6 +27,5 @@ class Compass:
 
         return int(heading)
     
-    
-    def get_angles(self):
+    def get_maj(self):
         return [y*(57.2958**2) for y in self.sensor.get_all()]
