@@ -5,7 +5,7 @@ import time as clock
 import math
 import threading
 import queue
-from maj import MadgwickAHRS
+from madgwick import MadgwickAHRS
 
 class Sensor:
 
@@ -106,7 +106,7 @@ class Sensor:
             if self.maj:
                 for i in range(5):
                     self.ahrs.update([x*0.0174533 for x in proc_gyro], accel, mag)
-                final += self.ahrs.quaternion.to_euler_angles()
+                final += [self.ahrs.quaternion.to_euler_angles()]
             self.queue.put(final)
 
             if self.raw:

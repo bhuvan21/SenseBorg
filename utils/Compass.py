@@ -3,7 +3,7 @@ from Sensor import Sensor
 
 class Compass:
     def __init__(self, i2c=None):
-        self.sensor = Sensor(raw=True, processed=True, i2c=i2c)
+        self.sensor = Sensor(raw=True, processed=True, maj=True, i2c=i2c)
 
     def get_heading(self, data=None):
         if data is None:
@@ -28,4 +28,4 @@ class Compass:
         return int(heading)
     
     def get_maj(self):
-        return [y*(57.2958**2) for y in self.sensor.get_all()]
+        return [y*(57.2958) for y in self.sensor.get_all()[6]]
