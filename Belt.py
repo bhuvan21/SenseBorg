@@ -20,7 +20,7 @@ class Belt:
             self.sensor = sensor
         
         if vibrations is None:
-            self.vibrations = Vibrations(units=units, i2c=self.i2c, order=order)
+            self.vibrations = Vibrations(units=units, order=order)
         else:
             self.vibrations = vibrations
 
