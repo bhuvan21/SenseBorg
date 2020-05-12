@@ -7,12 +7,7 @@ from time import sleep
 class Vibrations:
 
     def __init__(self, units=None, i2c=None, order=[]):
-        if i2c == None:
-            self.i2c = busio.I2C(board.SCL, board.SDA)
-        else:
-            self.i2c = i2c
-        
-        self.pwm = Adafruit_PCA9685.PCA9685(i2c=self.i2c)
+        self.pwm = Adafruit_PCA9685.PCA9685()
         
         if order == []:
             if units == None:
