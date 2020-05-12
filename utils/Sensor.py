@@ -5,7 +5,7 @@ import time as clock
 import math
 import threading
 import queue
-from madgwick import MadgwickAHRS
+from utils.madgwick import MadgwickAHRS
 
 class Sensor:
 

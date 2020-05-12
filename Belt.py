@@ -46,7 +46,7 @@ class Belt:
                     self.vibrations.safe_pwm(self.vibrations.order[index], 0, test)
 
             else:
-                for n, j in enumerate(y.on):
+                for n, j in enumerate(self.vibrations.on):
                     if j:
                         self.vibrations.safe_pwm(self.vibrations.order[n], 0, 0)
         except Exception as e:
