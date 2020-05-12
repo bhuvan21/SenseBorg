@@ -1,5 +1,5 @@
 import math
-from Sensor import Sensor
+from utils.Sensor import Sensor
 
 class Compass:
     def __init__(self, i2c=None):

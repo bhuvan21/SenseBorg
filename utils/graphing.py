@@ -24,11 +24,6 @@ class ConfigurableGraph:
         plt.xlabel('Samples')
         plt.ylabel('V')
 
-        ani = animation.FuncAnimation(self.fig,
-        self.animate,
-        fargs=(self.ys,),
-        interval=50,
-        blit=True)
         plt.show()
 
     def animate(self, i, ys): 
