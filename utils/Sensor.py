@@ -69,9 +69,15 @@ class Sensor:
         while 1:
             start = clock.time()
             if self.raw:
-                raw_accel = self.get_accel_raw()
-                raw_mag = self.get_mag_raw()
-                raw_gyro = self.get_gyro_raw()
+                try:
+                    
+                    raw_accel = self.get_accel_raw()
+                    raw_mag = self.get_mag_raw()
+                    raw_gyro = self.get_gyro_raw()
+                except OSError:
+                    raw_accel = self.get_accel_raw()
+                    raw_mag = self.get_mag_raw()
+                    raw_gyro = self.get_gyro_raw()
                 
                 mag = [0, 0, 0]
                 mag[0]  = (raw_mag[0] - self.MAG_LIMITS[0][0]) / (self.MAG_LIMITS[0][1] - self.MAG_LIMITS[0][0]) * 2 - 1.07
@@ -82,9 +88,14 @@ class Sensor:
                 gyro = raw_gyro
             
             if self.processed:
-                proc_accel = self.get_acceleration()
-                proc_mag = self.get_magnometer()
-                proc_gyro = self.get_gyro()
+                try:
+                    proc_accel = self.get_acceleration()
+                    proc_mag = self.get_magnometer()
+                    proc_gyro = self.get_gyro()
+                except OSError:
+                    proc_accel = self.get_acceleration()
+                    proc_mag = self.get_magnometer()
+                    proc_gyro = self.get_gyro()
                 
 
             if self.old_accel != [0, 0, 0] and self.raw:
