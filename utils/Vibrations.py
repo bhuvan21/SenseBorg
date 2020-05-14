@@ -20,14 +20,18 @@ class Vibrations:
         else:
             self.units = len(order)
             self.order = order
-
+        
+        print(self.order)
         self.on = list(range(self.units))
     
     def safe_pwm(self, a, b, c):
         try:
-            self.pwm.set_pwm(a, b, c)
+            #pass
+            self.pwm.set_pwm(self.order[a], b, c)
         except OSError:
-            self.pwm.set_pwm(a,b,c)
+            #pass
+            self.pwm.set_pwm(self.order[a],b,c)
+        print(abs(c-b))
         if abs(c - b) > 0:
             self.on[a] = True
         else:

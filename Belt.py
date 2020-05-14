@@ -40,15 +40,15 @@ class Belt:
                 else:
                     for n, j in enumerate(self.vibrations.on):
                         if j:
-                            self.vibrations.safe_pwm(self.vibrations.order[n], 0, 0)
+                            self.vibrations.safe_pwm(n, 0, 0)
 
                     test = min(int(math.sqrt((fb**2) + (lr**2))/150*3000), 3000)
-                    self.vibrations.safe_pwm(self.vibrations.order[index], 0, test)
+                    self.vibrations.safe_pwm(index, 0, test)
 
             else:
                 for n, j in enumerate(self.vibrations.on):
                     if j:
-                        self.vibrations.safe_pwm(self.vibrations.order[n], 0, 0)
+                        self.vibrations.safe_pwm(n, 0, 0)
         except Exception as e:
             print(e)
             self.vibrations.all_off()
