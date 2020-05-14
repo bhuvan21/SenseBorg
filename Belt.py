@@ -1,4 +1,5 @@
 import math
+import time
 
 import board
 import busio
@@ -7,6 +8,7 @@ import Adafruit_PCA9685
 from utils.vector import *
 from utils.Compass import Compass
 from utils.Vibrations import Vibrations
+from network import Sender
 
 class Belt:
     def __init__(self, sensor=None, vibrations=None, i2c=None, units=None, order=None):
@@ -23,9 +25,15 @@ class Belt:
             self.vibrations = Vibrations(units=units, order=order)
         else:
             self.vibrations = vibrations
+        
+        self.sender = Sender()
 
     def v1_mainloop(self):
         try:
+            if self.sensor.sensor.raw:
+                all = self.sensor.sensor.get_all()[3:6]
+                t = time.time()
+                self.sender.queue.put(all[0]+all[2]+all[1]+[t])
             raw = self.sensor.sensor.get_gyro()
             fb = -raw[0]
             lr = -raw[2]
