@@ -29,12 +29,16 @@ class Belt:
         self.sender = Sender()
 
     def v1_mainloop(self):
+        a = time.time()
         try:
             if self.sensor.sensor.raw:
-                all = self.sensor.sensor.get_all()[3:6]
+                all = self.sensor.sensor.get_all()
                 t = time.time()
-                self.sender.queue.put(all[0]+all[2]+all[1]+[t])
-            raw = self.sensor.sensor.get_gyro()
+                cut = all[3:6]
+                self.sender.queue.put(cut[0]+cut[2]+cut[1]+[t], block=False)
+                
+            raw = all[5]
+            print("gyro", time.time() - t)
             fb = -raw[0]
             lr = -raw[2]
             if abs(lr) >30 or abs(fb) > 40:
@@ -60,3 +64,5 @@ class Belt:
         except Exception as e:
             print(e)
             self.vibrations.all_off()
+
+        print(time.time()-a)

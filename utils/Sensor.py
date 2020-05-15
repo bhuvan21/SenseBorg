@@ -36,18 +36,24 @@ class Sensor:
         self.thread = threading.Thread(None, self.mainloop)
         self.thread.setDaemon(True)
         self.thread.start()
+        #self.mainloop()
 
     def get_all(self):
         result = None
+
         while 1:
             try:
+
                 result = self.queue.get(block=False)
+                if result != None:
+                    break
             except queue.Empty:
                 if result != None:
                     break
         return result
 
     def get_gyro(self):
+        #return list(self.sensor.gyro)
         return list(self.sensor.gyro)
     
     def get_acceleration(self):
@@ -67,6 +73,7 @@ class Sensor:
     
     def mainloop(self):
         while 1:
+            
             start = clock.time()
             if self.raw:
                 try:
@@ -111,15 +118,18 @@ class Sensor:
             
             final = []
             if self.raw:
-                final += [accel, mag, gyro]
+                final.extend([accel, mag, gyro])
+
             if self.processed:
-                final += [proc_accel, proc_mag, proc_gyro]
+                final.extend([proc_accel, proc_mag, proc_gyro])
+
             if self.maj:
                 for i in range(5):
                     self.ahrs.update([x*0.0174533 for x in proc_gyro], accel, mag)
-                final += [self.ahrs.quaternion.to_euler_angles()]
-            self.queue.put(final)
+                final.extend([self.ahrs.quaternion.to_euler_angles()])
 
+            self.queue.put(final, block=False)
+            
             if self.raw:
                 self.old_accel = accel
                 self.old_mag = mag
