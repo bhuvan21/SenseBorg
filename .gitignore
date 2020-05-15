@@ -1,6 +1,7 @@
 # My Things
 *.pickle
-
+*.db
+*.db-journal
 
 
 # Byte-compiled / optimized / DLL files
