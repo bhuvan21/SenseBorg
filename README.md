@@ -2,7 +2,7 @@
 A modular platform for human sensory adaptation via haptic feedback.  
 
 ## Introduction
-Sensory adaptation (in humans) is the process of the sensory system changing its relative sensitivity to sensory stimuli. An easy example of this is getting used to a cold pool after spending time in it. Sensory adaptation can occur on higher levels, such as after-effects in the vision system, from colors to facial attributes. Sensory adaptation can also result in the learning of new sensorimotor contingencies, or in simpler words "learning a new sense". Finally sensory adaptation can even occur in response to artificial stimuli. These are the scientific principles one which this project operates. For a more detailed writeup on this project, please check out the wiki.  
+Sensory adaptation (in humans) is the process of the sensory system changing its relative sensitivity to sensory stimuli. An easy example of this is getting used to a cold pool after spending time in it. Sensory adaptation can occur on higher levels, such as after-effects in the vision system, from colors to facial attributes. Sensory adaptation can also result in the learning of new sensorimotor contingencies, or in simpler words "learning a new sense". Finally sensory adaptation can even occur in response to artificial stimuli. These are the scientific principles one which this project operates. For a some more detailed information, please check out the wiki, and a full write up is in the works.
 
 
 ## The Project
