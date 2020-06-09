@@ -20,6 +20,16 @@ The second part of the project can be easily substituted for any other sensor, w
 Thus, this project provides a platform for providing artificial stimuli for use in more general artificial sensory adaptation experiments.
 
 
+## The Belt
+The specifics of the physical hardware in the SenseBorg belt is more detailed in the build folder, specifically BUILD.md. However, the basic features are as follows.  
+- 12h battery life
+- 16 different motor channels, each with PWM control
+- Wifi enabled
+- Bluetooth capabilities
+- Modular as haptic motors can be placed variably on the belt to accomodate for different waist sizes
+- ~2A Charging rate (if your charger can handle it) for overnight charging
+
+
 ## This Repository
 This repository contains the software and hardware information for the SenseBorg belt itself. Of course, a lot of the software is specific to interfacing with my specific sensor system, and translating this into targeted haptic feedback. Please have a look at build/BUILD.md for a build guide. This project is currently in it's first iteration, so is subject to change and improvement.
 
