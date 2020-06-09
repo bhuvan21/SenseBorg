@@ -46,6 +46,7 @@ class Belt:
                 angle = angleraw
                 if angleraw < 0:
                     angle = (180 - abs(angleraw)) + 180
+                print(angle)
                 index = int(angle/24)
                 if self.vibrations.on[index]:
                     return
