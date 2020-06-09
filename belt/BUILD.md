@@ -1,3 +1,0 @@
-# Build Guide
-
-## Parts
