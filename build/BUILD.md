@@ -48,7 +48,7 @@ The HAT also breaks out extra power pins, and I2C pins, and has jumper headers f
 
 |  1  |  2  |  3  |
 |:---:|:---:|:---:|
-| ![Blank HAT](/build/unsoldered_hat.jpg?raw=true) | ![Soldered HAT](/build/soldered_hat.jpg?raw=true) | ![Schematic PCB](/build/schematic.jpg?raw=true) |
+| ![Blank HAT](/build/unsoldered_hat.jpg?raw=true) | ![Soldered HAT](/build/soldered_hat.jpg?raw=true) | ![Schematic PCB](/build/schematic2.jpg?raw=true) |
 
 
 ## Making the Motor Clips
