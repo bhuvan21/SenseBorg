@@ -123,6 +123,10 @@ These are all the electronic connections required. Have a look at photos for ref
 
 ![Finished](/build/complete.jpg?raw=true)
 
+|  1  |  2  |
+|:---:|:---:|
+| ![Finished](/build/finished1.jpg?raw=true) | ![Finished](/build/finished2.jpg?raw=true)) |
+
 To put on the belt, first attach the belt holding the electronics pack, then the belt with the motors. Ensure the two belts do not overlap, and are around your midsection. It may be easier to do this whilst standing up!
 
 Congrats, the belt is now done from a hardware standpoint! If you would also like to make the headband I did, to approximate the sense of balance, instructions are below.
