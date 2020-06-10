@@ -2,6 +2,7 @@
 I appreciate this guide is very long, but it contains all the information needed to build one SenseBorg Belt, and my IMU headband.
 Please read the whole guide, as I'll admit not all information is placed in the best order (but it is all here)
 
+![Blueprint](/build/blueprint.jpg?raw=true)
 
 ## Tools You Will Need
 - A lot of patience and time
