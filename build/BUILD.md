@@ -133,7 +133,7 @@ Congrats, the belt is now done from a hardware standpoint! If you would also lik
 Have a look at the Belt class to see how the code works. You will likely have to use calibrate_order.py to determine which PWM outputs map to which motors, so that they can be interfaced with smoothly. Once all done, edit test_main.py and go for it! If you are using a different sensor, you'll have to implement your own mainloop, similar to my example
 
 ## IMU Headband
-Acquire a regualr head/hair band. It should be thin, so that a clip can fit on it.
+Acquire a regular head/hair band. It should be thin, so that a clip can fit on it.
 1. 3D Print a regular clip (clip.stl)
 2. Secure an IMU either of the clip's flat faces. (glue)
 3. Clip the clip onto the headband such that when word, the IMU is position near the back of the head, straight up.
