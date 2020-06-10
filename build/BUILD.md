@@ -2,7 +2,7 @@
 I appreciate this guide is very long, but it contains all the information needed to build one SenseBorg Belt, and my IMU headband.  
 Please read the whole guide, as I'll admit not all information is placed in the best order (but it is all here)
 
-![Blueprint](/build/blueprint.jpg?raw=true)
+![Blueprint](/build/images/blueprint.jpg?raw=true)
 
 ## Tools You Will Need
 - A lot of patience and time
@@ -48,7 +48,7 @@ The HAT also breaks out extra power pins, and I2C pins, and has jumper headers f
 
 |  1  |  2  |  3  |
 |:---:|:---:|:---:|
-| ![Blank HAT](/build/unsoldered_hat.jpg?raw=true) | ![Soldered HAT](/build/soldered_hat.jpg?raw=true) | ![Schematic PCB](/build/schematic2.jpg?raw=true) |
+| ![Blank HAT](/build/images/unsoldered_hat.jpg?raw=true) | ![Soldered HAT](/build/images/soldered_hat.jpg?raw=true) | ![Schematic PCB](/build/images/schematic2.jpg?raw=true) |
 
 
 ## Making the Motor Clips
@@ -66,7 +66,7 @@ You should now have finished a single motor clip. You will need ~16 of these.
 
 |  1  |  2  |
 |:---:|:---:|
-| ![Motor Clip Side](/build/motorclip_side.jpg?raw=true) | ![Motor Clip Back](/build/motorclip_back.jpg?raw=true) |
+| ![Motor Clip Side](/build/images/motorclip_side.jpg?raw=true) | ![Motor Clip Back](/build/images/motorclip_back.jpg?raw=true) |
 
 
 ## Board Arrangement
@@ -75,7 +75,7 @@ The box and its top will need to be 3D printed (see box.stl and top.stl)
 Below is a diagram of where the boards should go, and a picture of what this looks like.
 Ideally all the nuts and bolts will hold everything in place, but feel free to be liberal with glue if needed (an unfortunate reality)
 
-![Layout](/build/layout.png?raw=true)
+![Layout](/build/images/layout.png?raw=true)
 
 
 ## Wiring Overview
@@ -91,7 +91,7 @@ Use female-female jumper cables to connect each PWM output from the 16 Channel P
 Use female-female jumper cables, spliced with longer wires to create super long (~70-90cm) female-female jumper cables to connect each motor output (each pair from the groups of 3 headers on the SenseBorg HAT), to the two pins on each motor clip. Polarity doesn't matter.
 Use similarly long jumper cables to connect the broken out I2C and PWR pins to connect the pi to the I2C sensor.
 These are all the electronic connections required. Have a look at photos for reference, and the circuit diagram (wiring.jpg) too.
-![Wiring](/build/wiring.jpg?raw=true)
+![Wiring](/build/images/wiring.jpg?raw=true)
 
 ## Putting Together
 
@@ -119,13 +119,13 @@ These are all the electronic connections required. Have a look at photos for ref
 
 |  1  |  2  |  3  |  4  |
 |:---:|:---:|:---:|:---:|
-| ![Assembly 1](/build/assembly1.jpg?raw=true) | ![Assembly 2](/build/assembly2.jpg?raw=true) | ![Assembly 3](/build/assembly3.jpg?raw=true) | ![Assembly 4](/build/assembly4.jpg?raw=true) |
+| ![Assembly 1](/build/images/assembly1.jpg?raw=true) | ![Assembly 2](/build/images/assembly2.jpg?raw=true) | ![Assembly 3](/build/images/assembly3.jpg?raw=true) | ![Assembly 4](/build/images/assembly4.jpg?raw=true) |
 
-![Finished](/build/complete.jpg?raw=true)
+![Finished](/build/images/complete.jpg?raw=true)
 
 |  1  |  2  |
 |:---:|:---:|
-| ![Finished](/build/finished1.jpg?raw=true) | ![Finished](/build/finished2.jpg?raw=true)) |
+| ![Finished](/build/images/finished1.jpg?raw=true) | ![Finished](/build/images/finished2.jpg?raw=true)) |
 
 To put on the belt, first attach the belt holding the electronics pack, then the belt with the motors. Ensure the two belts do not overlap, and are around your midsection. It may be easier to do this whilst standing up!
 
@@ -141,4 +141,8 @@ Acquire a regular head/hair band. It should be thin, so that a clip can fit on i
 
 |  1  |  2  |
 |:---:|:---:|
-| ![IMU Clip](/build/IMU_clip.jpg?raw=true) | ![IMU Headband](/build/IMU_headband.jpg?raw=true)) |
+| ![IMU Clip](/build/images/IMU_clip.jpg?raw=true) | ![IMU Headband](/build/images/IMU_headband.jpg?raw=true)) |
+
+## Acknowledgements
+All the research I read which inspired me to make this project - specifically BrainPort and the feelSpace belt.
+MasterFX's PLA compatible clip design, which I used and remixed - https://www.thingiverse.com/thing:330151
