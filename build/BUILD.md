@@ -1,5 +1,5 @@
 # Build Guide
-I appreciate this guide is very long, but it contains all the information needed to build one SenseBorg Belt, and my IMU headband.
+I appreciate this guide is very long, but it contains all the information needed to build one SenseBorg Belt, and my IMU headband.  
 Please read the whole guide, as I'll admit not all information is placed in the best order (but it is all here)
 
 ![Blueprint](/build/blueprint.jpg?raw=true)
@@ -46,6 +46,8 @@ The HAT also breaks out extra power pins, and I2C pins, and has jumper headers f
 4. Solder the transistors, resistors, diodes and headers.
 5. You should now be left with a functional SenseBorg HAT.
 
+![Blank HAT](/build/unsoldered_hat.jpg?raw=true)
+![Soldered HAT](/build/soldered_hat.jpg?raw=true)
 
 ## Making the Motor Clips
 Each haptic motor is part of a motor clip. These motor clips clip around the belt at regular intervals, with the motors facing towards to wearer. This solution allows for a variable number of motors and placements. This helpes the belt work for all waist sizes. Each motor clips requires:
@@ -59,6 +61,10 @@ Each haptic motor is part of a motor clip. These motor clips clip around the bel
 4. Wrap the wires around the pivot of the clip, so that the headers rest parallel to the clip on the other side, in the provided indent. Secure them in place with glue of some kind.
 
 You should now have finished a single motor clip. You will need ~16 of these.
+
+![Motor Clip Side](/build/motorclip_side.jpg?raw=true)
+![Motor Clip Back](/build/motorclip_back.jpg?raw=true)
+
 
 ## Board Arrangement
 There is probably a better way of arranging all these boards, but improvements will come in V2.
@@ -106,7 +112,11 @@ These are all the electronic connections required. Have a look at photos for ref
 19. Attach this across the fanny pack in some way, with the pack attached at the middle of the belt.
 20. Place the electronics box into the pack, and zip up as much as possible, whilst letting wires come out.
 21. You may now need to adjust how you've routed your motor wires, to minimise crossovers, but you should now be done!
-
+![Assembly 1](/build/assembly1.jpg?raw=true)
+![Assembly 2](/build/assembly2.jpg?raw=true)
+![Assembly 3](/build/assembly3.jpg?raw=true)
+![Assembly 4](/build/assembly4.jpg?raw=true)
+![Finished](/build/complete.jpg?raw=true)
 
 To put on the belt, first attach the belt holding the electronics pack, then the belt with the motors. Ensure the two belts do not overlap, and are around your midsection. It may be easier to do this whilst standing up!
 
@@ -119,5 +129,8 @@ Acquire a regualr head/hair band. It should be thin, so that a clip can fit on i
 2. Secure an IMU either of the clip's flat faces. (glue)
 3. Clip the clip onto the headband such that when word, the IMU is position near the back of the head, straight up.
 4. Connect the long jumper I2C and PWR connections to the IMU.
+
+![IMU Clip](/build/IMU_clip.jpg?raw=true)  
+![IMU Headband](/build/IMU_headband.jpg?raw=true)
 
 TODO ADD PHOTOS, SCHEMATICS, DIAGRAMS, MORE INFO ETC
