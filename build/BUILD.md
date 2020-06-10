@@ -46,8 +46,10 @@ The HAT also breaks out extra power pins, and I2C pins, and has jumper headers f
 4. Solder the transistors, resistors, diodes and headers.
 5. You should now be left with a functional SenseBorg HAT.
 
-![Blank HAT](/build/unsoldered_hat.jpg?raw=true)
-![Soldered HAT](/build/soldered_hat.jpg?raw=true)
+|  1  |  2  |  3  |
+|:---:|:---:|:---:|
+| ![Blank HAT](/build/unsoldered_hat.jpg?raw=true) | ![Soldered HAT](/build/soldered_hat.jpg?raw=true) | ![Schematic PCB](/build/schematic.jpg?raw=true) |
+
 
 ## Making the Motor Clips
 Each haptic motor is part of a motor clip. These motor clips clip around the belt at regular intervals, with the motors facing towards to wearer. This solution allows for a variable number of motors and placements. This helpes the belt work for all waist sizes. Each motor clips requires:
@@ -62,8 +64,9 @@ Each haptic motor is part of a motor clip. These motor clips clip around the bel
 
 You should now have finished a single motor clip. You will need ~16 of these.
 
-![Motor Clip Side](/build/motorclip_side.jpg?raw=true)
-![Motor Clip Back](/build/motorclip_back.jpg?raw=true)
+|  1  |  2  |
+|:---:|:---:|
+| ![Motor Clip Side](/build/motorclip_side.jpg?raw=true) | ![Motor Clip Back](/build/motorclip_back.jpg?raw=true) |
 
 
 ## Board Arrangement
@@ -72,7 +75,8 @@ The box and its top will need to be 3D printed (see box.stl and top.stl)
 Below is a diagram of where the boards should go, and a picture of what this looks like.
 Ideally all the nuts and bolts will hold everything in place, but feel free to be liberal with glue if needed (an unfortunate reality)
 
-PIC
+![Layout](/build/layout.png?raw=true)
+
 
 ## Wiring Overview
 This section lists all the wiring that needs to be done. I suggest doing all the soldering first, and then doing the wiring after placing all the boards into the container.
@@ -86,8 +90,8 @@ Use female-female jumper cables to connect each PWM output from the 16 Channel P
 
 Use female-female jumper cables, spliced with longer wires to create super long (~70-90cm) female-female jumper cables to connect each motor output (each pair from the groups of 3 headers on the SenseBorg HAT), to the two pins on each motor clip. Polarity doesn't matter.
 Use similarly long jumper cables to connect the broken out I2C and PWR pins to connect the pi to the I2C sensor.
-These are all the electronic connections required. Have a look at photos for reference, and the circuit diagram too.
-
+These are all the electronic connections required. Have a look at photos for reference, and the circuit diagram (wiring.jpg) too.
+![Wiring](/build/wiring.jpg?raw=true)
 
 ## Putting Together
 
@@ -131,7 +135,6 @@ Acquire a regualr head/hair band. It should be thin, so that a clip can fit on i
 3. Clip the clip onto the headband such that when word, the IMU is position near the back of the head, straight up.
 4. Connect the long jumper I2C and PWR connections to the IMU.
 
-![IMU Clip](/build/IMU_clip.jpg?raw=true)  
-![IMU Headband](/build/IMU_headband.jpg?raw=true)
-
-TODO ADD PHOTOS, SCHEMATICS, DIAGRAMS, MORE INFO ETC
+|  1  |  2  |
+|:---:|:---:|
+| ![IMU Clip](/build/IMU_clip.jpg?raw=true) | ![IMU Headband](/build/IMU_headband.jpg?raw=true)) |
