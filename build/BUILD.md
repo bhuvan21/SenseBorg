@@ -112,10 +112,11 @@ These are all the electronic connections required. Have a look at photos for ref
 19. Attach this across the fanny pack in some way, with the pack attached at the middle of the belt.
 20. Place the electronics box into the pack, and zip up as much as possible, whilst letting wires come out.
 21. You may now need to adjust how you've routed your motor wires, to minimise crossovers, but you should now be done!
-![Assembly 1](/build/assembly1.jpg?raw=true)
-![Assembly 2](/build/assembly2.jpg?raw=true)
-![Assembly 3](/build/assembly3.jpg?raw=true)
-![Assembly 4](/build/assembly4.jpg?raw=true)
+
+|  1  |  2  |  3  |  4  |
+|:---:|:---:|:---:|:---:|
+| ![Assembly 1](/build/assembly1.jpg?raw=true) | ![Assembly 2](/build/assembly2.jpg?raw=true) | ![Assembly 3](/build/assembly3.jpg?raw=true) | ![Assembly 4](/build/assembly4.jpg?raw=true) |
+
 ![Finished](/build/complete.jpg?raw=true)
 
 To put on the belt, first attach the belt holding the electronics pack, then the belt with the motors. Ensure the two belts do not overlap, and are around your midsection. It may be easier to do this whilst standing up!
