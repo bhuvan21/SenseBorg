@@ -145,5 +145,7 @@ Acquire a regular head/hair band. It should be thin, so that a clip can fit on i
 
 ## Acknowledgements
 All the research I read which inspired me to make this project - specifically BrainPort and the feelSpace belt.  
-MasterFX's PLA compatible clip design, which I used and remixed - https://www.thingiverse.com/thing:330151
+MasterFX's PLA compatible clip design, which I used and remixed - https://www.thingiverse.com/thing:330151  
 And of course to Prabha Kotiswaran, for being my first test subject, without whom this experiment would not have been possible.
+Dr Jane Evans (Project Supervisor)'s advice was also very helpful.  
+Thomas Fossati's advice on networking for sending data wirelessly was also v. helpful.  
