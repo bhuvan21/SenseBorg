@@ -2,7 +2,7 @@
 A modular platform for human sensory substitution via haptic feedback.  
 
 ## Introduction
-The concept of sensory substitution involves supplying sensory stimuli through a sensory modality usually used for gathering different sensory data  – and has an important role to play in rehabilitation those with vestibular impairments. Sensory substitution requires the use of a specific device, which uses artificial sensors to collect sensory data, and delivers this data to a subject via one of their sensory modalities (e.g touch, audio, visual). Devices which do this are called SSDs.
+The concept of sensory substitution involves supplying sensory stimuli through a sensory modality usually used for gathering different sensory data  – and has an important role to play in rehabilitation those with vestibular impairments. Sensory substitution requires the use of a specific device, which uses artificial sensors to collect sensory data, and delivers this data to a subject via one of their sensory modalities (e.g touch, audio, visual). Devices which do this are called sensory substitution devices (SSDs).
 
 
 ## The Project
@@ -36,5 +36,4 @@ This repository contains the software and hardware information for the SenseBorg
 
 ## Results
 After a first experiment, the hypothesis that the wearing of this belt would result in an increase in the wearer's sense of balance, was shown to be statistically significant. (Balance was tested via a sharpened Romberg Test, the belt was worn over a week period for 12 hours a day, the statistical difference was measured via a T-test, and the final p < 0.01)
-A full writeup of this experiment will be made available soon for specific information on methodology and data analysis.
-Hopefully, a second iteration of this experiment will be conducted over the summer!
+My research paper based on this device is currently pending publication.
