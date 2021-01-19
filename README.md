@@ -40,4 +40,4 @@ This repository contains the software and hardware information for the SenseBorg
 
 ## Results
 After a first experiment, the hypothesis that the wearing of this belt would result in an increase in the wearer's sense of balance, was shown to be statistically significant. (Balance was tested via a sharpened Romberg Test, the belt was worn over a week period for 12 hours a day, the statistical difference was measured via a T-test, and the final p < 0.01)
-My research paper based on this device is currently pending publication.
+My research paper based on this device is undergoing a final review at the Young Scientists Journal.
