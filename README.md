@@ -1,5 +1,9 @@
 # SenseBorg
-A modular platform for human sensory substitution via haptic feedback.  
+A modular platform for human sensory substitution via haptic feedback.
+
+![Blueprint](/build/images/blueprint.jpg?raw=true)
+
+![Finished](/build/images/finished1.jpg?raw=true)
 
 ## Introduction
 The concept of sensory substitution involves supplying sensory stimuli through a sensory modality usually used for gathering different sensory data  – and has an important role to play in rehabilitation those with vestibular impairments. Sensory substitution requires the use of a specific device, which uses artificial sensors to collect sensory data, and delivers this data to a subject via one of their sensory modalities (e.g touch, audio, visual). Devices which do this are called sensory substitution devices (SSDs).
