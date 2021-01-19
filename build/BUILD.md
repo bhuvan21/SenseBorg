@@ -125,7 +125,7 @@ These are all the electronic connections required. Have a look at photos for ref
 
 |  1  |  2  |
 |:---:|:---:|
-| ![Finished](/build/images/finished1.jpg?raw=true) | ![Finished](/build/images/finished2.jpg?raw=true)) |
+| ![Finished](/build/images/finished1.jpg?raw=true) | ![Finished](/build/images/finished2.jpg?raw=true) |
 
 To put on the belt, first attach the belt holding the electronics pack, then the belt with the motors. Ensure the two belts do not overlap, and are around your midsection. It may be easier to do this whilst standing up!
 
